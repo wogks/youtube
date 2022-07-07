@@ -37,69 +37,33 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Row(
+      body: ListView.builder(
+        itemCount: 20,
+        itemBuilder: (context, index){
+          return Column(
+            children: [
+              Row(
                 children: [
-                  Image.asset('assets/11.jpeg',height: 100,),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('오준석 생존코딩 숙제오준석 생존코딩 숙제',style: TextStyle(color: Colors.white),),
-                          Text('조회수 1회 • 1분전',style: TextStyle(fontSize: 10,color: Colors.grey),),
-                          SizedBox(height: 40,)
-                        ],
-                      ),
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Image.asset('assets/11.jpeg',width: 180,height: 100,fit: BoxFit.cover,)),
+                    Column(crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(child:
+                         Text('Youtube Clone PracticeYoutube Clone PracticeYoutube Clone Practice',
+                         style: TextStyle(color: Colors.white),),
+                         width: 190, height: 75,
+                         ),
+                         Text('조회수 11만회 · 10일전',style: TextStyle(color: Colors.grey,fontSize: 12),)
+                      ],
                     ),
-                  )
+                     
                 ],
-              ),
-          ),Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Row(
-                children: [
-                  Image.asset('assets/11.jpeg',height: 100,),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('오준석 생존코딩 숙제오준석 생존코딩 숙제',style: TextStyle(color: Colors.white),),
-                          Text('조회수 1회 • 1분전',style: TextStyle(fontSize: 10,color: Colors.grey),),
-                          SizedBox(height: 40,)
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-          ),Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Row(
-                children: [
-                  Image.asset('assets/11.jpeg',height: 100,),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('오준석 생존코딩 숙제오준석 생존코딩 숙제',style: TextStyle(color: Colors.white),),
-                          Text('조회수 1회 • 1분전',style: TextStyle(fontSize: 10,color: Colors.grey),),
-                          SizedBox(height: 40,)
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-          ),
-          
-          
-        ]
+              )
+            ],
+          );
+
+      },
         ),
       
     );
